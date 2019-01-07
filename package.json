@@ -1,14 +1,25 @@
 {
   "name": "@maslick/react-radiaslider",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.1",
+  "description": "React component for radiaslider",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maslick/react-radiaslider.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "keywords": [
+    "react",
+    "radiaslider"
+  ],
+  "author": "Pavel Maslov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maslick/react-radiaslider/issues"
+  },
+  "homepage": "https://github.com/maslick/react-radiaslider#readme",
   "dependencies": {
     "@maslick/radiaslider": "^1.3.1",
     "react": "^16.7.0",
