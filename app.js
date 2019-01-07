@@ -4,6 +4,18 @@ import Slider from "@maslick/radiaslider/circular/slider-circular";
 
 
 class RadiaSlider extends React.Component {
+
+    renderBand(i, radius, min, max, step, color, changed) {
+        this.slider.addSlider({
+            id: i,
+            radius: radius,
+            min: min,
+            max: max,
+            color: color,
+            changed: changed
+        });
+    }
+
     render() {
         return (
             <div className="slider">
@@ -17,57 +29,25 @@ class RadiaSlider extends React.Component {
     }
 
     componentDidMount() {
-        let slider = new Slider({
+        this.slider = new Slider({
             canvasId: this.props.id,
             continuousMode: this.props.continuousMode === 'true'
         });
 
-        slider.addSlider({
-            id: 1,
-            radius: 50,
-            min: 0,
-            max: 30,
-            step: 1,
-            color: "#104b63",
-            changed: v => {
-                document.getElementById(this.props.id + '_value1').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
-            }
+        this.renderBand(1, 50, 0, 30, 1, "#104b63", v => {
+            document.getElementById(this.props.id + '_value1').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
 
-        slider.addSlider({
-            id: 2,
-            radius: 90,
-            min: 0,
-            max: 30,
-            step: 1,
-            color: "#76c7e9",
-            changed: v => {
-                document.getElementById(this.props.id + '_value2').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
-            }
+        this.renderBand(2, 90, 0, 30, 1, "#76c7e9", v => {
+            document.getElementById(this.props.id + '_value2').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
 
-        slider.addSlider({
-            id: 3,
-            radius: 130,
-            min: 0,
-            max: 30,
-            step: 5,
-            color: "#ff9a9a",
-            changed: v => {
-                document.getElementById(this.props.id + '_value3').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
-            }
+        this.renderBand(3, 130, 0, 30, 5, "#ff9a9a", v => {
+            document.getElementById(this.props.id + '_value3').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
 
-        slider.addSlider({
-            id: 4,
-            radius: 170,
-            min: 0,
-            max: 30,
-            step: 5,
-            color: "#fff149",
-            changed: v => {
-                document.getElementById(this.props.id + '_value4').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
-            }
+        this.renderBand(4, 170, 0, 30, 5, "#fff69f", v => {
+            document.getElementById(this.props.id + '_value4').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
     }
 }
