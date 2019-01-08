@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-import Slider from "@maslick/radiaslider/circular/slider-circular";
+import { circular as Slider } from "@maslick/radiaslider";
 
 
 class RadiaSlider extends React.Component {
