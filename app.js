@@ -20,10 +20,10 @@ class RadiaSlider extends React.Component {
         return (
             <div className="slider">
                 <canvas id={this.props.id} className="graph" width="400" height="400"/>
-                <div id={this.props.id + "_value1"} className="dashboard"/>
-                <div id={this.props.id + "_value2"} className="dashboard"/>
-                <div id={this.props.id + "_value3"} className="dashboard"/>
-                <div id={this.props.id + "_value4"} className="dashboard"/>
+                <div id={this.props.id + "_value1"} className="dashboard" style={{background: "#104b63", color: "white"}}/>
+                <div id={this.props.id + "_value2"} className="dashboard" style={{background: "#76c7e9", color: "white"}}/>
+                <div id={this.props.id + "_value3"} className="dashboard" style={{background: "#ff9a9a", color: "white"}}/>
+                <div id={this.props.id + "_value4"} className="dashboard" style={{background: "#fff69f", color: "black"}}/>
             </div>
         );
     }
