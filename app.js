@@ -34,21 +34,26 @@ class RadiaSlider extends React.Component {
             continuousMode: this.props.continuousMode === 'true'
         });
 
-        this.renderBand(1, 50, 0, 30, 1, "#104b63", v => {
+        this.renderBand(1, 50, -50, 50, 1, "#104b63", v => {
             document.getElementById(this.props.id + '_value1').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
 
-        this.renderBand(2, 90, 0, 30, 1, "#76c7e9", v => {
+        this.renderBand(2, 90, -100, 100, 5, "#76c7e9", v => {
             document.getElementById(this.props.id + '_value2').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
 
-        this.renderBand(3, 130, 0, 30, 5, "#ff9a9a", v => {
+        this.renderBand(3, 130, 0, 360, 0.1, "#ff9a9a", v => {
             document.getElementById(this.props.id + '_value3').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
 
-        this.renderBand(4, 170, 0, 30, 5, "#fff69f", v => {
+        this.renderBand(4, 170, 0, 360, 1, "#fff69f", v => {
             document.getElementById(this.props.id + '_value4').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
         });
+
+        this.slider.setSliderValue(1, 34);
+        this.slider.setSliderValue(2, 70);
+        this.slider.setSliderValue(3, 307);
+        this.slider.setSliderValue(4, 307);
     }
 }
 
@@ -56,5 +61,6 @@ let mount = document.getElementById("app");
 ReactDom.render(
     <div>
         <RadiaSlider id="hello1" continuousMode="true"/>
+        <br/><br/>
         <RadiaSlider id="hello2" continuousMode="false"/>
     </div>, mount);
