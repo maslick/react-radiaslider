@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import { circular as Slider } from "@maslick/radiaslider";
+import $ from "jquery";
 
 
 class RadiaSlider extends React.Component {
@@ -34,20 +35,22 @@ class RadiaSlider extends React.Component {
             continuousMode: this.props.continuousMode === 'true'
         });
 
+        const callback = (v) => "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
+
         this.renderBand(1, 50, -50, 50, 1, "#104b63", v => {
-            document.getElementById(this.props.id + '_value1').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
+            $(`#${this.props.id}_value1`).html(callback(v));
         });
 
         this.renderBand(2, 90, -100, 100, 5, "#76c7e9", v => {
-            document.getElementById(this.props.id + '_value2').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
+            $(`#${this.props.id}_value2`).html(callback(v));
         });
 
         this.renderBand(3, 130, 0, 360, 0.1, "#ff9a9a", v => {
-            document.getElementById(this.props.id + '_value3').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
+            $(`#${this.props.id}_value3`).html(callback(v));
         });
 
         this.renderBand(4, 170, 0, 360, 1, "#fff69f", v => {
-            document.getElementById(this.props.id + '_value4').innerHTML = "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
+            $(`#${this.props.id}_value4`).html(callback(v));
         });
 
         this.slider.setSliderValue(1, 34);
