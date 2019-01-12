@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/maslick/react-radiaslider#readme",
   "dependencies": {
-    "@maslick/radiaslider": "^1.4.3",
+    "@maslick/radiaslider": "^1.5.0",
     "jquery": "^3.3.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
