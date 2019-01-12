@@ -1,6 +1,6 @@
 {
   "name": "@maslick/react-radiaslider",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "React component for radiaslider",
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@maslick/radiaslider": "^1.5.0",
-    "dist": "^0.1.2",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
@@ -47,9 +46,9 @@
     "styled-jsx": "^3.1.3"
   },
   "scripts": {
-    "test": "parcel index.html --public-url ./ -d test/",
-    "demo": "rm -fr demo/ && parcel build index.html --public-url ./ --out-dir demo/",
     "build:dev": "NODE_ENV=development rollup -c",
-    "build:prod": "NODE_ENV=production rollup -c"
+    "build:prod": "NODE_ENV=production rollup -c",
+    "test": "parcel index.html -d test",
+    "demo": "rm -fr demo/ && parcel build index.html --public-url ./ --out-dir demo/"
   }
 }
