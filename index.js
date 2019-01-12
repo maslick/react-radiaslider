@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { circular as Slider } from "@maslick/radiaslider";
-import $ from "jquery";
 
 
 class RadiaSlider extends React.Component {
@@ -38,19 +37,19 @@ class RadiaSlider extends React.Component {
         const callback = (v) => "Angle: " + v.deg.toFixed(2) + " deg, value: " + v.value.toFixed(2);
 
         this.renderBand(1, 50, -50, 50, 1, "#104b63", v => {
-            $(`#${this.props.id}_value1`).html(callback(v));
+            document.getElementById(`${this.props.id}_value1`).innerHTML = callback(v);
         });
 
         this.renderBand(2, 90, -100, 100, 5, "#76c7e9", v => {
-            $(`#${this.props.id}_value2`).html(callback(v));
+            document.getElementById(`${this.props.id}_value2`).innerHTML = callback(v);
         });
 
         this.renderBand(3, 130, 0, 360, 0.1, "#ff9a9a", v => {
-            $(`#${this.props.id}_value3`).html(callback(v));
+            document.getElementById(`${this.props.id}_value3`).innerHTML = callback(v);
         });
 
         this.renderBand(4, 170, 0, 360, 1, "#fff69f", v => {
-            $(`#${this.props.id}_value4`).html(callback(v));
+            document.getElementById(`${this.props.id}_value4`).innerHTML = callback(v);
         });
 
         this.slider.setSliderValue(1, 34);
