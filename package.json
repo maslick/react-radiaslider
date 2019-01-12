@@ -1,11 +1,12 @@
 {
   "name": "@maslick/react-radiaslider",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "React component for radiaslider",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maslick/react-radiaslider.git"
   },
+  "main": "index.js",
   "keywords": [
     "react",
     "radiaslider"
@@ -20,7 +21,8 @@
     "@maslick/radiaslider": "^1.4.3",
     "jquery": "^3.3.1",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "parcel": "^1.11.0",
@@ -31,6 +33,6 @@
   },
   "scripts": {
     "start": "parcel index.html -d test",
-    "build": "parcel build index.html --public-url ./ --out-dir demo/"
+    "build": "rm -fr demo/ && parcel build index.html --public-url ./ --out-dir demo/"
   }
 }
