@@ -1,6 +1,6 @@
 import ReactDom from "react-dom";
 import React from "react";
-import RadiaSlider from "./index";
+import RadiaSlider from "./dist/index";
 
 let mount = document.getElementById("app");
 ReactDom.render(
