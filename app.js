@@ -11,5 +11,5 @@ ReactDom.render(
         <br/><br/>
         <LinearSlider id="karandashi1"/>
         <br/><br/>
-        <LinearSlider id="karandashi2"/>
+        <LinearSlider id="karandashi2" continuousMode="false"/>
     </div>, mount);

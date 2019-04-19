@@ -46,7 +46,7 @@ export default class LinearSlider extends React.Component {
     }
 
     componentDidMount() {
-        this.slider = new Slider({ canvasId: this.props.id, continuousMode: this.props.continuousMode, vertical: true });
+        this.slider = new Slider({ canvasId: this.props.id, continuousMode: this.props.continuousMode === true, vertical: true });
         this.initKarandashi();
     }
 }
