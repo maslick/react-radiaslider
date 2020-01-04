@@ -1,6 +1,6 @@
 {
   "name": "@maslick/react-radiaslider",
-  "version": "1.4.0",
+  "version": "1.9.0",
   "description": "React component for radiaslider",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "styled-jsx": ">= 2.x.x"
   },
   "dependencies": {
-    "@maslick/radiaslider": "^1.6.1",
+    "@maslick/radiaslider": "^1.9.0",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
